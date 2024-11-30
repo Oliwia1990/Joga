@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="pl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,92 +36,69 @@
             background-color: rgb(174, 174, 148);
             display: flex;
             align-items: center;
-            justify-content: stretch
+            justify-content: space-between; /* Zmieniamy, by elementy miały odpowiednią przestrzeń */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             z-index: 100;
             color: white;
-            padding: 15px; /* Dodaje odstępy zarówno z lewej, jak i z prawej strony */
-            margin left: 40px
-        
+            padding: 15px;
         }
 
         /* Logo w banerze */
         .top-banner .logo img {
-            height: 125px;
-            margin right: 50px
-            width:auto
-            
-            
+            height: 100px; /* Zmniejszamy wysokość logo */
+            width: auto;
         }
 
-/* Stylizacja napisu 'Witamy w Strefie Relaksu' */
-.welcome-text {
-    font-family: 'Arial', sans-serif; /* Możesz zmienić na inną czcionkę */
-    font-size: 30px; /* Zmieniamy na jednostkę % szerokości ekranu (responsive) */
-    font-weight: bold; /* Pogrubienie tekstu */
-    color: #e0e2d5; /* Kolor czcionki (biały) */
-    text-align: justify; /* Wyrównanie do środka */
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6); /* Dodanie cienia, by tekst był bardziej widoczny */
-    letter-spacing: 2px; /* Rozstawienie liter, aby tekst był bardziej przestrzenny */
-    margin-top: 25px; /* Odstęp od góry strony */
-    text-transform: uppercase; /* Wszystkie litery duże */
-    margin: 45px 0 30px;
-}
-
-/* Dodatkowo możesz użyć tła gradientowego, aby dodać efekt */
-.welcome-text {
-    margin-left: 350px; /* Odstęp 10px po lewej */
-    margin-right: 120px; /* Odstęp 5px po prawej */
-    background: linear-gradient(to right, #6c8964, #a0b69f);
-    -webkit-background-clip: text; /* Nałożenie gradientu na tekst */
-    background-clip: text;} /* To samo, ale dla wszystkich przeglądarek */
+        /* Stylizacja napisu 'Witamy w Strefie Relaksu' */
+        .welcome-text {
+            font-family: 'Arial', sans-serif;
+            font-size: 20px; /* Zmniejszamy rozmiar tekstu */
+            font-weight: bold;
+            color: #e0e2d5;
+            text-align: center; /* Zmieniamy na center */
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+            letter-spacing: 2px;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
 
         /* Przycisk zapisy w banerze */
         .top-banner .register-button {
-    background-color: #708778;
-    color: #444544;
-    padding: 10px 20px; /* Zmniejszony padding */
-    border: none;
-    border-radius: 8px;
-    font-size: 0.9em; /* Zmniejszony rozmiar tekstu */
-    cursor: pointer;
-    text-decoration: none;
-    text-transform: uppercase;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    margin: 60px; /* Oddalenie od prawej krawędzi */
+            background-color: #708778;
+            color: #444544;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.9em;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
+
         /* Kontener przycisków */
-.buttons-container {
-    display: inline-flex; /* Ustawienie przycisków w jednym wierszu */
-    text-align: justify;
-    gap: 1px; /* Odstęp między przyciskami */
-}
+        .buttons-container {
+            display: inline-flex;
+            text-align: justify;
+            gap: 10px;
+        }
 
-/* Styl przycisków */
-.register-button {
-  
-    background-color: #6c8964; /* Zmieniamy tło na ciemniejszy kolor */
-    color: #dbdcd2; /* Kolor tekstu na biały */
-    padding: 5px 5px; /* Zwiększony padding */
-    border: none;
-    border-radius: 6px;
-    text-align: justify
-    font-size: 1em; /* Normalny rozmiar tekstu */
-    cursor: pointer;
-    text-decoration: none;
-    text-transform: uppercase;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    margin: 160;
-    z-index: 1
-    
-}
+        /* Styl przycisków */
+        .register-button {
+            background-color: #6c8964;
+            color: #dbdcd2;
+            padding: 5px 15px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1em;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
 
-.register-button:hover {
-    background-color: #4b6d4b; /* Ciemniejsze tło przy najechaniu */
-}
-
-        .top-banner .register-button:hover {
-            background-color: #f2f2f2;
+        .register-button:hover {
+            background-color: #4b6d4b;
         }
 
         /* Nagłówek */
@@ -134,7 +108,7 @@
         }
 
         .header h1 {
-            font-size: 2.5em;
+            font-size: 2em;
             font-weight: bold;
             color: #3e3e3e;
         }
@@ -146,44 +120,42 @@
             border-radius: 10px;
             padding: 20px;
             margin: 20px auto;
-            width: 75%;
+            width: 85%; /* Zwiększamy szerokość kontenerów */
             max-width: 600px;
-          font-weight: bold;
+            font-weight: bold;
             color: rgb(195, 201, 158);
             text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
             height: 250px;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-           
             overflow: hidden;
             background-size: cover;
             background-position: center;
-        
         }
 
         .container.otwarte-biodra::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('joga-biodra.jpg'); /* Tło kontenera */
-    background-size: cover;
-    background-position: center;
-    filter: blur(5px); /* Efekt rozmycia */
-    z-index: -1; /* Ustawienie za tekstem */
-}
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('joga-biodra.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: blur(5px);
+            z-index: -1;
+        }
 
-/* Styl stopki w ramce */
-footer {
+        /* Styl stopki w ramce */
+        footer {
             text-align: center;
             padding: 30px;
             margin-top: 40px;
             background-color: #f0f0f0;
             color: #333;
-            border-top: 3px solid #6c8964; /* Ramka górna */
+            border-top: 3px solid #6c8964;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             font-size: 1.1em;
         }
@@ -201,7 +173,65 @@ footer {
             background-color: white;
         }
 
+        /* Responsywność */
+        @media (max-width: 768px) {
+            .top-banner {
+                flex-direction: column; /* Zmiana układu na kolumnowy */
+                height: auto;
+                align-items: center;
+            }
 
+            .top-banner .logo img {
+                height: 80px; /* Zmniejszenie logo na mniejszych ekranach */
+            }
+
+            .welcome-text {
+                font-size: 22px; /* Zmniejszenie tekstu */
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .container {
+                width: 90%; /* Szerokość kontenerów na mniejszych ekranach */
+            }
+
+            .header h1 {
+                font-size: 1.8em; /* Zmniejszenie nagłówka */
+            }
+
+            .register-button {
+                font-size: 0.8em;
+                padding: 8px 18px; /* Zmniejszenie paddingu */
+            }
+
+            footer {
+                font-size: 1em; /* Zmniejszenie czcionki stopki */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .top-banner {
+                padding: 10px; /* Mniejsze paddingi na bardzo małych ekranach */
+            }
+
+            .register-button {
+                font-size: 0.75em;
+                padding: 6px 15px;
+            }
+
+            .welcome-text {
+                font-size: 18px;
+                margin: 10px 0;
+            }
+
+            .container {
+                width: 100%; /* Pełna szerokość na bardzo małych ekranach */
+            }
+
+            .header h1 {
+                font-size: 1.5em; /* Mniejsze nagłówki */
+            }
+        }
     </style>
 </head>
 
@@ -220,18 +250,18 @@ footer {
         <!-- Przycisk grafik -->
         <a href="pracaKoncowa.harmonogram.html" class="register-button">Grafik</a>
         <!-- Przycisk zapisy -->
-        <a href="formularz copy.html" class="register-button">Zapisy</a>
+        <a href="formularz.html" class="register-button">Zapisy</a>
     </div>
 
     <!-- Nagłówek -->
     <div class="header">
-        <h1>Praktyki Jogi</h1>
+        <h1>Zajęcia Jogi</h1>
     </div>
 
     <!-- Kontenery -->
     <div class="container" style="background-image: url('jogapozycja.jpg');">
         <h2>Joga na wdowi garb</h2>
-        <p>Dla osób z problemami z karkiem i szyją.</p>
+        <p>Krótkie opisy, np. dla osób z problemami z karkiem.</p>
     </div>
     <div class="container otwarte-biodra" style="background-image: url('otwarcie\ bioder.jpg');">
         <h2>Joga na otwarcie bioder</h2>
