@@ -12,7 +12,7 @@
             background-color: #f7f7f7;
         }
         .form-container {
-            max-width: 400px;
+            max-width: 600px; /* Zwiększamy maksymalną szerokość */
             margin: 50px auto;
             background-color: #fff;
             padding: 20px;
@@ -55,13 +55,48 @@
         button:hover {
             background-color: #45a049;
         }
+
+        /* Media Queries dla urządzeń mobilnych */
+        @media (max-width: 768px) {
+            .form-container {
+                max-width: 100%; /* Na urządzeniach mobilnych rozciągamy formularz do 100% szerokości */
+                margin: 20px; /* Mniejsze marginesy */
+                padding: 15px; /* Mniejsze paddingi */
+            }
+            h2 {
+                font-size: 1.5em; /* Zmniejszamy rozmiar nagłówka */
+            }
+            input[type="text"], input[type="email"], textarea {
+                padding: 8px; /* Mniejsze paddingi dla inputów */
+            }
+            button {
+                padding: 12px; /* Większy przycisk na urządzeniach mobilnych */
+                font-size: 1em; /* Dostosowanie czcionki przycisku */
+            }
+        }
+
+        /* Dostosowanie dla jeszcze mniejszych ekranów (telefony) */
+        @media (max-width: 480px) {
+            .form-container {
+                padding: 10px; /* Zmniejszenie paddingu */
+            }
+            h2 {
+                font-size: 1.2em; /* Zmniejszenie nagłówka */
+            }
+            input[type="text"], input[type="email"], textarea {
+                font-size: 0.9em; /* Dostosowanie czcionki */
+            }
+            button {
+                font-size: 1.1em; /* Większy przycisk */
+            }
+        }
     </style>
 </head>
 <body>
 
     <div class="form-container">
         <h2>Formularz Zapisów</h2>
-        <!-- Tutaj wstawiamy formularz z Zapier -->
+        <!-- Formularz do wysyłania danych -->
         <form action="https://hooks.zapier.com/hooks/catch/20867820/2ir91e5/" method="POST">
             <label for="name">Imię:</label>
             <input type="text" id="name" name="name" required>
@@ -70,13 +105,11 @@
             <input type="text" id="course" name="course" required>
 
             <label for="email">E-mail:</label>
-            <input type="text" id="email" name="email" required>
+            <input type="email" id="email" name="email" required>
             
             <input type="submit" value="Wyślij">
         </form>
     </div>
 
-
-    
 </body>
 </html>
